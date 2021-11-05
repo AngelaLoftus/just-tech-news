@@ -37,12 +37,12 @@ async function loginFormHandler(event) {
             body: JSON.stringify({
                 email,
                 password
-            }),
+            }),  
             headers: { 'Content-Type': 'application/json' }
         });
 
         if (response.ok) {
-            document.location.replace('/');
+            document.location.replace('/dashboard');
         } else {
             alert(response.statusText);
         }
